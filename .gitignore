@@ -1,0 +1,11 @@
+# Python and packaging artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Local evaluation and release outputs
+runs/
+release/

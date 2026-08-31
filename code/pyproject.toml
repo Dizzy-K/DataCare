@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pollution-eval"
+version = "0.1.0"
+description = "Open evaluation suite for hierarchical data pollution detection."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "tqdm>=4.64"
+]
+
+[project.optional-dependencies]
+local-qwen = [
+  "torch>=2.1",
+  "transformers>=4.40",
+  "peft>=0.11",
+  "safetensors>=0.4",
+  "accelerate>=0.29",
+  "bitsandbytes>=0.43"
+]
+dev = [
+  "pytest>=7"
+]
+
+[project.scripts]
+pollution-eval = "pollution_eval.cli.evaluate:main"
+pollution-prepare = "pollution_eval.cli.prepare_dataset:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pollution_eval*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+

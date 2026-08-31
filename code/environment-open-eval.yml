@@ -1,0 +1,16 @@
+name: pollution-open-eval
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - tqdm
+  - pytest
+  - pip:
+      - torch>=2.1
+      - transformers>=4.40
+      - peft>=0.11
+      - safetensors>=0.4
+      - accelerate>=0.29
+      - bitsandbytes>=0.43
+
