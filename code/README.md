@@ -1,4 +1,4 @@
-# TrainGuard Evaluation Toolkit
+# DataCARE-CN Evaluation Toolkit
 
 This package evaluates hierarchical data-pollution detection models. It provides:
 
